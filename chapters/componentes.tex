@@ -249,6 +249,29 @@ Las tablas (en realidad \enquote{cuadros}) son una forma muy eficaz de presentar
 
 Sin embargo, las tablas suelen ser bastante complicadas en \LaTeX, por lo menos para la gente que empieza. Para no escribir demasiado, la respuesta para casi toda maquetación de tabla está en \href{https://www.tablesgenerator.com/}{https://www.tablesgenerator.com/}. En serio, no perdáis el tiempo si no es estrictamente necesario. La maquetáis visualmente, la generáis (con estilo \textit{booktabs}) y a correr.
 
+\subsection{Pseudocódigos}
+
+
+\begin{algorithm}
+\begin{algorithmic}[1]
+\STATE $\forall i \in V$, \ let $i$ be an isolated community
+\STATE $o=\texttt{permutation}(V)$
+\FOR{$k \ \in \ o$}
+\STATE search in $A$ all the neighbours of $k$, $j$
+\STATE $\forall j$, calculate $\Delta Q_k(j)$ in matrix $\mathcal{M}$
+\STATE $j^*=\{ \ j \ | \ \Delta Q_k(j^*)=\max_j\{Q_k(j)\} \ \}$
+\IF{$\Delta Q_k(j^*)>0$}
+\STATE{Move node $k$ to $j^*$ 's community}
+\ELSE
+\STATE{$k$ remains in its community}
+\ENDIF
+\ENDFOR
+\end{algorithmic}\caption{\textit{Additional Louvain} \textbf{input}=$\left(A, \ \mathcal{M}\right)$ \textbf{output}=$P$}
+\label{alg:AdditionalLouvain}
+\end{algorithm}
+
+En el algoritmo~\ref{alg:AdditionalLouvain} aparece un ejemplo en pseudocódigo.
+
 \section{Enlaces de hipertexto}
 
 TBD

@@ -24,12 +24,14 @@
 \RequirePackage{ifthen}     % Para poder usar condicionales en la clase
 \RequirePackage{pdflscape}  % Posibilidad de páginas en apaisado
 \RequirePackage{xcolor}     % Mejoras sobre el paquete color
+\RequirePackage{algorithm}  % generación de pseudocódigos
+\RequirePackage{algorithmic}% generación de pseudocódigos 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Valores constantes
 %
-\def\universityname{Universidad Politécnica de Madrid}
-\def\templaterepository{https://github.com/blazaid/UPM-Report-Template}
+\def\universityname{Universidad Rey Juan Carlos}
+\def\templaterepository{https://github.com/scaverod/TFG-Report-Template.git}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Opciones de la clase
@@ -51,38 +53,16 @@
 \newcommand{\schoolabbr}{}
 \newcommand{\schoollogo}{}
 \newcommand{\schooladdress}{}
-\ifthenelse{\equal{\@upm@school}{etsidi}}{%
-    \renewcommand{\schoolname}{E.T.S. de Ingeniería y Diseño Industrial}
-    \renewcommand{\schoolabbr}{ETSIDI}
-    \renewcommand{\schoollogo}{upm-report/logos/logo-etsidi.png}
-    \renewcommand{\schooladdress}{%
-        c/ Ronda de Valencia, 3\\
-        28012, Madrid, España
-    }
-    \definecolor{schoolcolor}{RGB}{223,30,64}
-    \definecolor{linkcolor}{RGB}{223,30,64}
-}{}
 \ifthenelse{\equal{\@upm@school}{etsii}}{%
-    \renewcommand{\schoolname}{E.T.S. de Ingenieros Industriales}
+    \renewcommand{\schoolname}{E.T.S. de Ingeniería Informática}
     \renewcommand{\schoolabbr}{ETSII}
-    \renewcommand{\schoollogo}{upm-report/logos/logo-etsii.png}
+    \renewcommand{\schoollogo}{upm-report/logos/logo-urjc-etsii.png}
     \renewcommand{\schooladdress}{%
-        c/ José Gutiérrez Abascal, 2\\
-        28006, Madrid, España
+        Campus de Móstoles, Calle Tulipán s/n.\\
+        28933 Móstoles, Madrid
     }
-    \definecolor{schoolcolor}{RGB}{0,177,230}
-    \definecolor{linkcolor}{RGB}{0,177,230}
-}{}
-\ifthenelse{\equal{\@upm@school}{etsisi}}{%
-    \renewcommand{\schoolname}{E.T.S. de Ingeniería de Sistemas Informáticos}
-    \renewcommand{\schoolabbr}{ETSISI}
-    \renewcommand{\schoollogo}{upm-report/logos/logo-etsisi.png}
-    \renewcommand{\schooladdress}{%
-        Campus Sur UPM, Carretera de Valencia (A-3), km. 7\\
-        28031, Madrid, España
-    }
-    \definecolor{schoolcolor}{RGB}{31,130,192}
-    \definecolor{linkcolor}{RGB}{31,130,192}
+    \definecolor{schoolcolor}{RGB}{203, 0, 23}
+    \definecolor{linkcolor}{RGB}{203, 0, 23}
 }{}
 \ifthenelse{\equal{\schoolname}{}}{
     \PackageError{upm-report}{School}{Falta el parámetro 'school'}
@@ -119,47 +99,37 @@
 \newcommand{\degreecode}{}
 \newcommand{\degreename}{}
 %% ETSIDI
-\ifthenelse{\equal{\@upm@degree}{56IE}}{
-    \renewcommand{\degreecode}{56IE}
-    \renewcommand{\degreename}{Grado en Ingeniería Eléctrica}
+\ifthenelse{\equal{\@upm@degree}{GCID}}{
+    \renewcommand{\degreecode}{GCID}
+    \renewcommand{\degreename}{Grado en Ciencia e Ingeniería de Datos}
 }{}
-\ifthenelse{\equal{\@upm@degree}{56IA}}{
-    \renewcommand{\degreecode}{56IA}
-    \renewcommand{\degreename}{Grado en Ingeniería Electrónica Industrial y Automática}
+\ifthenelse{\equal{\@upm@degree}{GDDV}}{
+    \renewcommand{\degreecode}{GDDV}
+    \renewcommand{\degreename}{Grado en Diseño y Desarrollo de Videojuegos}
 }{}
-\ifthenelse{\equal{\@upm@degree}{56IM}}{
-    \renewcommand{\degreecode}{56IM}
-    \renewcommand{\degreename}{Grado en Ingeniería Mecánica}
-}{}
-\ifthenelse{\equal{\@upm@degree}{56IQ}}{
-    \renewcommand{\degreecode}{56IQ}
-    \renewcommand{\degreename}{Grado en Ingeniería Química}
-}{}
-\ifthenelse{\equal{\@upm@degree}{56DD}}{
-    \renewcommand{\degreecode}{56DD}
-    \renewcommand{\degreename}{Grado en Ingeniería en Diseño Industrial y Desarrollo de Producto}
-}{}
-%% ETSISI
-\ifthenelse{\equal{\@upm@degree}{61CD}}{
-    \renewcommand{\degreecode}{61CD}
-    \renewcommand{\degreename}{Grado en Ciencia de Datos e Inteligencia Artificial}
-}{}
-\ifthenelse{\equal{\@upm@degree}{61CI}}{
-    \renewcommand{\degreecode}{61CI}
+\ifthenelse{\equal{\@upm@degree}{GIC}}{
+    \renewcommand{\degreecode}{GIC}
     \renewcommand{\degreename}{Grado en Ingeniería de Computadores}
 }{}
-\ifthenelse{\equal{\@upm@degree}{61IW}}{
-    \renewcommand{\degreecode}{61IW}
+\ifthenelse{\equal{\@upm@degree}{GICIB}}{
+    \renewcommand{\degreecode}{GICIB}
+    \renewcommand{\degreename}{Grado en Ingeniería de la Ciberseguridad}
+}{}
+\ifthenelse{\equal{\@upm@degree}{GIS}}{
+    \renewcommand{\degreecode}{GIS}
     \renewcommand{\degreename}{Grado en Ingeniería del Software}
 }{}
-\ifthenelse{\equal{\@upm@degree}{61SI}}{
-    \renewcommand{\degreecode}{61SI}
-    \renewcommand{\degreename}{Grado en Sistemas de Información}
+\ifthenelse{\equal{\@upm@degree}{GII}}{
+    \renewcommand{\degreecode}{GII}
+    \renewcommand{\degreename}{Grado en Ingeniería Informática}
 }{}
-\ifthenelse{\equal{\@upm@degree}{61TI}}{
-    \renewcommand{\degreecode}{61TI}
-    \renewcommand{\degreename}{Grado en Tecnologías para la Sociedad de la Información
-    }
+\ifthenelse{\equal{\@upm@degree}{GIA}}{
+    \renewcommand{\degreecode}{GIA}
+    \renewcommand{\degreename}{Grado en Inteligencia Artificial}
+}{}
+\ifthenelse{\equal{\@upm@degree}{MAT}}{
+    \renewcommand{\degreecode}{MAT}
+    \renewcommand{\degreename}{Grado en Matemáticas}
 }{}
 \ifthenelse{\equal{\degreecode}{}}{
     \PackageError{upm-report}{Degree}{Falta el parámetro 'degree'}
@@ -434,6 +404,8 @@
     version={4.0}%
 ]{doclicense}
 
+
+
 \makeatletter
 % Impresión de licencia modificada para que incluya más cosas. Es un
 % clon de \docLicenseThis
@@ -469,7 +441,7 @@
     \AddToShipoutPicture*{%
         \AtPageLowerLeft{%
             \makebox[1\paperwidth][r]{%
-                \includegraphics[width=0.9\paperwidth]{upm-report/logos/logo-upm}
+                \includegraphics[width=0.9\paperwidth]{upm-report/logos/logo-urjc}
             }%
         }
         \put(0,0){%
@@ -633,7 +605,7 @@
     }
     \vspace*{\fill}
     \begin{center}
-        \includegraphics[width=6cm]{\schoollogo}
+        \includegraphics[width=8cm]{\schoollogo}
     \end{center}
 }
 \makeatother
