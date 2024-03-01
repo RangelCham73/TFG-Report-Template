@@ -2,33 +2,53 @@
     school=etsii,%
     type=pfg,%
     degree=GIC,%
-    authorsex=f,%
-    directorsex=f,%
+    authorsex=m,%
+    directorsex=m,%
 ]{urjc-report}
 
 \addbibresource{references.bib}
 
-\title{Plantilla de Trabajos Fin de Grado de la ETSII de la URJC}
-\author{Autora Proyecto}
+\title{Aplicación movil de mejora de rendimiento de baloncesto}
+\author{Diego Rangel Sanz}
 \bibauthor{Proyecto, A.}
-\director{Directora Proyecto}
+\director{Director Proyecto}
 \bibdirector{Proyecto, D.}
 
-\codirector[f]{Codirectora Proyecto}{Proyecto, C.}
+\codirector[f]{Codirector Proyecto}{Proyecto, C.}
 
 \abstract{spanish}{
-    El resumen de un \acrlong{pfg} o de un \acrlong{pfm} condensa en tres o cuatro párrafos el contenido de la memoria. Se debe dar por sentado que el lector podrá tener una idea clara de lo que trata, y suele ser la primera barrera donde decide si continúa leyendo o no el texto.
-    
-    \textbf{Condensado no quiere decir incompleto}. Debe contener la información más destacable. Lo ideal es que ocupe entre media y una cara de un folio A4. Comenzará por el propósito y principales objetivos de la memoria. Luego hablaremos sobre los aspectos más destacables de la metodología empleada, seguido de los resultados obtenidos. Por último se presentarán las conclusiones de forma condensada.
-    
-    Debe tener un estilo claro y conciso, sin ambigüedades de ningún tipo. Además, al ser un resumen de todo el contenido, ni que decir tiene que deberá ser lo último que elaboraremos, y deberá mantener una absoluta fidelidad con el contenido de la memoria.
+
+    Este trabajo de fin de grado presenta el diseño y desarrollo de una aplicación móvil destinada a mejorar el rendimiento de los jugadores de baloncesto,
+    denominada \textit{Hoop Finder}. La aplicación se enfoca en ofrecer herramientas y recursos para el entrenamiento físico, técnico y táctico,
+    adaptados a las necesidades específicas de los usuarios. Se emplean técnicas de análisis de datos para proporcionar un enfoque interactivo y
+    personalizado que motive a los jugadores a alcanzar sus objetivos de mejora.
+
+    El desarrollo de la aplicación se basa en proporcionar herramientas para la mejora del tiro del jugador y entrenamiento en equipo. Además, mediante
+    el uso del GPS, los jugadores podrán realizar un seguimiento de su entrenamiento. Se implementan características como un campo de tiro que rastrea
+    la posición del jugador o jugadas de ataque en equipo. Además, se realiza un estudio estadístico para proporcionar al jugador toda la información
+    necesaria para monitorizar sus entrenamientos.
+
+    El resultado final es una aplicación móvil intuitiva y completa que ofrece a los jugadores de baloncesto una plataforma integral para mejorar su
+    rendimiento individual y colectivo. Se espera que esta herramienta contribuya significativamente al desarrollo y perfeccionamiento de habilidades
+    en jugadores de todos los niveles, desde amateurs hasta profesionales, y promueva una cultura de aprendizaje continuo en el ámbito del baloncesto.
 }
-\keywords{spanish}{Cuatro o cinco; Expresiones clave; Que resuman; Nuestro proyecto o; Investigación}
+\keywords{spanish}{Aplicación móvil para baloncesto; Mejora del tiro; Seguimiento mediante GPS; Rendimiento individual y colectivo}
 
 \abstract{english}{
-    This section must contain the summary that we have written before in Spanish, but in English, as well as the keywords.
+    This bachelor´s degree final project presents the design and development of a mobile application aimed at improving the performance of basketball players,
+    named \textit{Hoop Finder}. The application focuses on providing tools and resources for physical, technical, and tactical training, tailored to the
+    specific needs of users. Data analysis techniques are employed to provide an interactive and personalized approach that motivates players to
+    achieve their improvement goals.
+
+    The development of the application is based on providing tools for improving shooting skills and team training. Additionally, using GPS, players
+    will be able to track their training. Features such as a shooting range that tracks the player's position or team attack plays
+    are implemented. Furthermore, a statistical study is conducted to provide the player with all the necessary information to monitor their training.
+
+    The result is an intuitive and comprehensive mobile application that offers basketball players a comprehensive platform to improve their
+    individual and collective performance. It is expected that this tool will significantly contribute to the development and refinement of skills
+    in players of all levels, from amateurs to professionals, and promote a culture of continuous learning in the field of basketball.
 }
-\keywords{english}{Four or five; Key Expressions; Summarising; Our Project or; Research}
+\keywords{english}{Basketball mobile application; Shooting improvement; GPS tracking; Individual and collective performance}
 
 \acknowledgements{
     Aquí los agradecimientos que quieras dar. Y si no quieres, borras la entrada \texttt{\textbackslash acknowledgements} de \texttt{report.tex} y ya está.
@@ -39,6 +59,11 @@
 \include{frontmatter/glossary}
 
 \input{chapters/introduccion}
+\input{chapters/objetivos}
+\input{chapters/desarrollo del software}
+\input{chapters/resultados}
+\input{chapters/conclusiones}
+\input{chapters/anexo}
 \input{chapters/configuracion}
 \input{chapters/componentes}
 \input{chapters/licencia}
